@@ -173,3 +173,35 @@ let age1: Age ;
 
 age1 = 30;
 ////////////
+
+//////////// Optional chaining
+
+type Customer = {birthday: Date}
+
+function getCustomer(id: number): Customer | null | undefined  { return id === 0 ? null : { birthday: new Date()}}
+
+let customer1 = getCustomer(0);
+let customer2 = getCustomer(1);
+
+// Without the optional property
+
+// if(customer1 !== null)
+//     console.log(customer1.birthday);
+// if(customer2 !== null)
+//     console.log(customer2.birthday);
+
+// using the optional property access operator
+
+console.log(customer1?.birthday);
+console.log(customer2?.birthday);
+
+
+// optional call
+
+let call1: any = (message: number) => console.log(message);
+let call2: any = null ;
+
+call1?.('hey');
+call2?.('0');
+
+////////////

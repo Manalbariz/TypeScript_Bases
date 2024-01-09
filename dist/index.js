@@ -103,4 +103,20 @@ let textBox = {
 };
 let age1;
 age1 = 30;
+function getCustomer(id) { return id === 0 ? null : { birthday: new Date() }; }
+let customer1 = getCustomer(0);
+let customer2 = getCustomer(1);
+// Without the optional property
+// if(customer1 !== null)
+//     console.log(customer1.birthday);
+// if(customer2 !== null)
+//     console.log(customer2.birthday);
+// using the optional property access operator
+console.log(customer1?.birthday);
+console.log(customer2?.birthday);
+// optional call
+let call1 = (message) => console.log(message);
+let call2 = null;
+call1?.('hey');
+call2?.('0');
 ////////////
