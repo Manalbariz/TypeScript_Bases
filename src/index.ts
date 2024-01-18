@@ -205,3 +205,27 @@ call1?.('hey');
 call2?.('0');
 
 ////////////
+
+// Type Assertions
+
+let message;
+
+message = 'abc';
+let endWithC = ( <string> message).endsWith('c');
+let alternativeWay = ( message as string).endsWith('b');
+
+console.log(endWithC);
+console.log(alternativeWay);
+
+////////////
+
+// Arrow function
+
+let log = function(message: string){
+    console.log(message);
+
+}
+
+let doLog = (message: string) => console.log(message);  //this called arrow function
+
+////////////

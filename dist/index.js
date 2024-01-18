@@ -120,3 +120,11 @@ let call2 = null;
 call1?.('hey');
 call2?.('0');
 ////////////
+// Type Assertions
+let message;
+message = 'abc';
+let endWithC = message.endsWith('c');
+let alternativeWay = message.endsWith('b');
+console.log(endWithC);
+console.log(alternativeWay);
+////////////
