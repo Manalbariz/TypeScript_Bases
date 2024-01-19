@@ -1,4 +1,3 @@
-"use strict";
 //////////// how to declare a variable
 let age = 40;
 let age2 = 40;
@@ -127,4 +126,60 @@ let endWithC = message.endsWith('c');
 let alternativeWay = message.endsWith('b');
 console.log(endWithC);
 console.log(alternativeWay);
+////////////
+// Arrow function
+let log = function (message) {
+    console.log(message);
+};
+let doLog = (message) => console.log(message); //this called arrow function
+let drawPoint;
+////////////
+// Classes && objects
+class Point {
+    x = 6;
+    y;
+    draw() {
+        console.log('X = ' + this.x + ' Y = ' + this.y);
+    }
+    getDistance() {
+    }
+}
+let point = new Point();
+point.x = 4;
+point.y = 5;
+point.draw();
+////////////
+// Constructors && Access Modifiers ( public / private / protected)
+class Point2 {
+    x;
+    y;
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    draw() {
+        console.log('X = ' + this.x + ' Y = ' + this.y);
+    }
+    getDistance() {
+    }
+}
+let point2 = new Point2(9, 15);
+point2.draw();
+////////////
+// Access Modifiers in Constructor Parameters ( To make the code cleaner)
+class Point3 {
+    x;
+    y;
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    } // parameters are declared and initialize
+    draw() {
+        console.log('X = ' + this.x + ' Y = ' + this.y);
+    }
+    getDistance() {
+    }
+}
+let point3 = new Point3(90, 51);
+point3.draw();
 ////////////

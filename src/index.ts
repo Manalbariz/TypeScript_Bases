@@ -229,3 +229,73 @@ let log = function(message: string){
 let doLog = (message: string) => console.log(message);  //this called arrow function
 
 ////////////
+
+// Interfaces
+interface Point1 {
+    z: number,
+    w: number
+}
+
+let drawPoint : (point: Point1) => {  
+    // drawThePointAlgorithm 
+}
+////////////
+
+// Classes && objects
+
+class Point {
+    x: number = 6;
+    y: number;
+
+    draw(){
+        console.log('X = ' + this.x + ' Y = ' + this.y);  
+    }
+    getDistance(){
+
+    }
+}
+
+let point = new Point();
+point.x = 4;
+point.y = 5;
+point.draw();
+////////////
+
+// Constructors && Access Modifiers ( public / private / protected)
+
+class Point2 {
+    private x: number; 
+    private y: number;
+    constructor(x?: number, y?: number){       //? :  to make parameter optional
+        this.x = x;
+        this.y = y;
+    }
+    draw(){
+        console.log('X = ' + this.x + ' Y = ' + this.y);  
+    }
+    getDistance(){
+
+    }
+}
+
+let point2 = new Point2(9 , 15  );
+
+point2.draw();
+////////////
+
+// Access Modifiers in Constructor Parameters ( To make the code cleaner)
+
+class Point3 {
+    constructor(private x?: number, private y?: number){}     // parameters are declared and initialize
+
+    draw(){
+        console.log('X = ' + this.x + ' Y = ' + this.y);  
+    }
+    getDistance(){
+
+    }
+}
+
+let point3 = new Point3(90 , 51  );
+point3.draw();
+////////////
