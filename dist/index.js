@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const point_1 = require("./point");
 //////////// how to declare a variable
 let age = 40;
 let age2 = 40;
@@ -183,3 +186,31 @@ class Point3 {
 let point3 = new Point3(90, 51);
 point3.draw();
 ////////////
+// Properties ( getter / setter )
+class Point4 {
+    _x;
+    _y;
+    constructor(_x, _y) {
+        this._x = _x;
+        this._y = _y;
+    } // parameters are declared and initialize
+    draw() {
+        console.log('X = ' + this._x + ' Y = ' + this._y);
+    }
+    get x() {
+        return this._x;
+    }
+    set x(value) {
+        this._x = value;
+    }
+}
+let point4 = new Point4(9, 3);
+let w = point4.x; // instead of:   let w = point4.getX();
+console.log(w);
+point4.x = 7; // instead of:   point4.setX(7);
+point4.draw();
+////////////
+// Modules
+let point5 = new point_1.Point5(10, 16);
+point5.draw();
+//////

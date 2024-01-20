@@ -1,3 +1,4 @@
+import {Point5} from './point';
 
 //////////// how to declare a variable
 
@@ -299,3 +300,36 @@ class Point3 {
 let point3 = new Point3(90 , 51  );
 point3.draw();
 ////////////
+
+// Properties ( getter / setter )
+
+class Point4 {
+    constructor(private _x?: number, private _y?: number){}     // parameters are declared and initialize
+
+    draw(){
+        console.log('X = ' + this._x + ' Y = ' + this._y);  
+    }
+    
+    get x(){                                        //instead of:  getX(){ return this.x; }
+        return this._x;                                 
+    }            
+    set x(value){                                   //instead of:  setX(value: number){ this.x = value; }
+        this._x = value;
+    }                                     
+}
+
+let point4 = new Point4(9 ,3  );
+
+let w = point4.x;                       // instead of:   let w = point4.getX();
+console.log(w);
+point4.x = 7;                           // instead of:   point4.setX(7);
+point4.draw();
+////////////
+
+
+// Modules
+
+let point5 = new Point5(10 , 16);
+point5.draw();
+
+//////
